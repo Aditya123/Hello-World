@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <string-array name="gender">
+        <item>Left (L)</item>
+        <item>Left of Center (LC)</item>
+        <item>Center (C)</item>
+        <item>Right of Center (RC)</item>
+        <item>Right (R)</item>
+        <item>Tongue Left (TL)</item>
+        <item>Tongue Right (TR)</item>
+        <item>Tongue Ventral (TV)</item>
+
+    </string-array>
+    
+</resources>

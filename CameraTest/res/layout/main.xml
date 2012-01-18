@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroller"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1">
+    <TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:text="Please Enter Name(NO SPACES):" android:layout_gravity="center" android:gravity="center" android:textSize="28dip" android:layout_width="292dp" android:layout_weight="0.05"></TextView>
+    <EditText android:layout_width="match_parent" android:id="@+id/editText1" android:inputType="textPersonName" android:layout_height="wrap_content" android:layout_weight="0.04">
+    </EditText>
+    <TextView android:id="@+id/textView2" android:layout_height="wrap_content" android:layout_width="match_parent" android:textSize="28dip" android:text="Enter the Device Model(No Spaces):" android:gravity="center" android:layout_weight="0.05"></TextView>
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/editText2" android:layout_weight="0.07"></EditText>
+    <TextView android:layout_width="match_parent" android:textAppearance="?android:attr/textAppearanceMedium" android:text="Enter the tagged information" android:gravity="center" android:layout_gravity="top" android:layout_weight="0.04" android:id="@+id/textView3" android:layout_height="wrap_content"></TextView>
+    <EditText android:layout_width="match_parent" android:id="@+id/editText3" android:layout_height="wrap_content" android:inputType="textMultiLine" android:layout_weight="0.29"></EditText>
+    
+    <Spinner android:layout_height="wrap_content" 
+    		 android:id="@+id/spinner1" 
+    		 android:layout_width="match_parent" 
+    		 android:layout_weight="0.05"
+    		 android:prompt="@string/gender_prompt"
+    		 >
+    		 </Spinner>
+    		
+    <Button android:layout_width="match_parent" android:layout_weight="0.04" android:layout_height="wrap_content" android:text="Enter Information" android:id="@+id/button1"></Button>
+</LinearLayout>
+</ScrollView>
