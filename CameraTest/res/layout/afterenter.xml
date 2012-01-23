@@ -2,7 +2,9 @@
 <LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
-  android:layout_height="match_parent" android:orientation="vertical" android:weightSum="1">
+  android:layout_height="match_parent" android:weightSum="1" android:orientation="vertical">
+    <Spinner android:id="@+id/spinner1" android:layout_width="match_parent" android:layout_gravity="center_horizontal" android:layout_height="wrap_content" android:layout_marginLeft="80dip" android:layout_marginRight="80dip"></Spinner>
     <Button android:layout_height="wrap_content" android:text="Press to take photos" android:id="@+id/button2" android:layout_width="match_parent" android:layout_weight="0.09" android:textSize="20dip"></Button>
-    <Button android:layout_height="wrap_content" android:id="@+id/button3" android:layout_width="match_parent" android:text="Next Person" android:layout_weight="0.08" android:textSize="20dip"></Button>
+    <Button android:id="@+id/button1" android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_weight="0.08" android:text="Retake Photo" android:textSize="20dip"></Button>
+    <Button android:text="Next Person" android:textSize="20dip" android:layout_weight="0.08" android:id="@+id/button3" android:layout_height="wrap_content" android:layout_width="match_parent"></Button>
 </LinearLayout>

@@ -1,4 +1,4 @@
-package doh.doh;
+package doh.doh;    
 
 import java.io.File;
 
@@ -19,7 +19,7 @@ import android.widget.Spinner;
 import java.util.Calendar;
 
 public class CameraTestActivity extends Activity {
-    /** Called when the activity is first created. */
+    /** Called when the activity is first created. */ 
 	private static final String TAG = "CameraTestActivity.java";
 		
     @Override
@@ -28,17 +28,13 @@ public class CameraTestActivity extends Activity {
         setContentView(R.layout.main);
         
         Button b = (Button) findViewById(R.id.button1);
-        final Spinner s = (Spinner) findViewById(R.id.spinner1);
-        ArrayAdapter <CharSequence> adapter = ArrayAdapter.createFromResource(
-                    CameraTestActivity.this, R.array.gender, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        s.setAdapter(adapter);
+
         
         b.setOnClickListener(new OnClickListener() {
         
  
         	  EditText text = (EditText)findViewById(R.id.editText1); 
-            //EditText text2 = (EditText)findViewById(R.id.editText2);
+        	  EditText text2 = (EditText)findViewById(R.id.editText2);
             //EditText text3 = (EditText)findViewById(R.id.editText3);
 
             
@@ -51,24 +47,25 @@ public class CameraTestActivity extends Activity {
 				int month = cal.get(Calendar.MONTH) + 1;
 				int day = cal.get(Calendar.DAY_OF_MONTH);
 				
-				final String position = s.getSelectedItem().toString();
+				//final String position = s.getSelectedItem().toString();
 				//Log.e(TAG, position); This just logs the position that someone selected
 				final String name = text.getText().toString();
-				int paren = name.indexOf("("); //first index of the parethesis
-				final String posLetter = name.substring(paren, position.length() - 1);
+				final String apparatus = text2.getText().toString();
+				//final String posLetter = name.substring(paren, position.length() - 1);
 								
 				//String place = placeName.substring(0,3);
 	            //String direct  = name + place ;
 	            String time = year + "-" + month + "-" + day;//Year Month Day part
 	            String model = Build.MODEL;//The phone Model
 	            
-	            File folder = new File("/sdcard/OrganizePic/" + time + model + name + "/");
+	            File folder = new File("/sdcard/OrganizePic/" + time + model + apparatus + "-" + name + "/");
 				folder.mkdirs();
 				
 				Intent myIntent = new Intent(CameraTestActivity.this, Press.class);
-				myIntent.putExtra("key", "/sdcard/OrganizePic/" + time + model + name + "/");
+				myIntent.putExtra("key", "/sdcard/OrganizePic/" + time + model + apparatus + "-" + name + "/");
 				myIntent.putExtra("stan", name);
-				myIntent.putExtra("hello", posLetter);
+				myIntent.putExtra("hello", time);
+				myIntent.putExtra("apparatus", apparatus);
 				startActivity(myIntent);   
 				
 			}

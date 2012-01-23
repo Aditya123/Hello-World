@@ -15,14 +15,6 @@
     <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/editText2" android:layout_weight="0.07"></EditText>
     <TextView android:layout_width="match_parent" android:textAppearance="?android:attr/textAppearanceMedium" android:text="Enter the tagged information" android:gravity="center" android:layout_gravity="top" android:layout_weight="0.04" android:id="@+id/textView3" android:layout_height="wrap_content"></TextView>
     <EditText android:layout_width="match_parent" android:id="@+id/editText3" android:layout_height="wrap_content" android:inputType="textMultiLine" android:layout_weight="0.29"></EditText>
-    
-    <Spinner android:layout_height="wrap_content" 
-    		 android:id="@+id/spinner1" 
-    		 android:layout_width="match_parent" 
-    		 android:layout_weight="0.05"
-    		 android:prompt="@string/gender_prompt"
-    		 >
-    		 </Spinner>
     		
     <Button android:layout_width="match_parent" android:layout_weight="0.04" android:layout_height="wrap_content" android:text="Enter Information" android:id="@+id/button1"></Button>
 </LinearLayout>
